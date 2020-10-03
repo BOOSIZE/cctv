@@ -19,41 +19,8 @@
 </head>
 <body>
 
-<table id="a" lay-filter="a"></table>
-
-
-<script>
-
-
-	layui.use('table', function()
-	{
-
-		var table = layui.table;
-
-
-		//msg:"",code:"",count:"",data:""//String
-
-		table.render({
-			elem: '#a'
-			,url: "<%=path+"aaa/getList"%>"//后端路径
-			,page: true//开启分页
-			,limit:5//每页条数
-			,limits:[5,10]//可选择每页条数
-			,id:"a"//设置table的id（表格重载时调用）
-			,cols: [
-				[
-					{field:'sname', title: '姓名', width:'50%'},
-					{field:'ssex', title: '性别', width:'50%'}
-				]
-			]
-		});
-
-	});
-
-
-
-</script>
-
+		<h2 style="color: RED">Hello world</h2>
+		<input type="button" value="按钮" onclick="alert(111)">
 
 
 
