@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cctv.dao.OgDao">
+
+    <select id="getSum" parameterType="java.util.HashMap" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM oginfo WHERE 1=1
+        <if test="cname!=null">
+             AND CNAME LIKE CONCAT('%',#{cname},'%')
+        </if>
+
+        <if test="country!=null">
+            AND COUNTRY=#{country}
+        </if>
+    </select>
+
+
+    <select id="getList" parameterType="java.util.HashMap" resultType="com.example.cctv.entity.Oginfo">
+        SELECT * FROM oginfo WHERE 1=1
+        <if test="cname!=null">
+            AND CNAME LIKE CONCAT('%',#{cname},'%')
+        </if>
+
+        <if test="country!=null">
+            AND COUNTRY=#{country}
+        </if>
+         ORDER BY DATE LIMIT #{limit} OFFSET #{start}
+
+    </select>
+
+
+</mapper>
