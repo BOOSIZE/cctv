@@ -13,4 +13,6 @@ public class GoController
 	{
 		return path;
 	}
+
+	//2的分支
 }
