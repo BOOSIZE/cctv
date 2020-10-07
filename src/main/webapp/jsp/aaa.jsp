@@ -20,7 +20,7 @@
 <body>
 
 		<h2 style="color: RED">Hello world</h2>
-		<input type="button" value="按钮" onclick="alert(111)">
+		<input type="button" value="按钮1" onclick="alert(111)">
 
 
 
