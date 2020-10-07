@@ -21,4 +21,7 @@ public class AController
 	}
 
 
+	public  void test(){
+		System.out.println(123);
+	}
 }
